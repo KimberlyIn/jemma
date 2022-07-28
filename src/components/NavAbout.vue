@@ -1,4 +1,7 @@
 <template>
+  <!-- <div v-for="(item,index) in title_list" :key="item.id" :value='item.title' @click="jump(index)" class="list1">
+    {{item.title}}
+  </div> -->
   <div class="sticky-top" style="z-index: 9;">
     <nav class="navbar navbar-expand-lg px-5 py-3">
       <div class="container-fluid">
@@ -7,21 +10,18 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <div 
-            v-for="(item,index) in title_list" 
-            :key="item.id" 
-            :value='item.title' 
-            @click="jump(index)" 
-            class="list1"
-          >
-            <ul class="navbar-nav">
-              <li class="nav-item"> 
-                {{item.title}}
-              </li>
-            </ul>
-          </div>
           <div>
             <ul class="navbar-nav">
+              <li class="nav-item"> 
+                <p @click="toguid('/','works')">
+                  WORKS
+                </p>
+              </li>
+              <li class="nav-item"> 
+                <p @click="toguid('/','article')">
+                  ARTICLES
+                </p>
+              </li>
               <li class="nav-item"> 
                 <p @click="toguid('/about','about')">
                   ABOUT
@@ -40,10 +40,6 @@
 export default {
   data () {
     return {
-      title_list: [
-        { title: 'WORKS', active: true },
-        { title: 'ARTICLES', active: false },
-      ],
     }
   },
   methods: {
@@ -52,17 +48,6 @@ export default {
       var Id=id;
       localStorage.setItem('toId',Id);
       this.$router.push(path);
-    },
-    jump (index) {
-      var items = document.querySelectorAll(".scroll-item"); // 給每個組件最外層加個 class 名字 scroll-item
-      for (var i = 0; i < items.length; i++) {
-        if (index === i) {
-          items[i].scrollIntoView({
-            block: "start",// 默認跳轉到頂部
-            behavior: "smooth"// 滾動的速度
-          });
-        }
-      }
     },
   },
   mounted() {

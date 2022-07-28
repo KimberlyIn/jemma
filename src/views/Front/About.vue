@@ -1,4 +1,5 @@
 <template>
+  <NavAbout/>
   <div id="about" class="about">
     <div class="container">
       <h1>About Me</h1>
@@ -60,29 +61,33 @@
 </template>
 
 <script>
-export default {
-  created() {
-    this.$nextTick(()=>{this.toLocal()})
-  },
-  mounted() {
-    let _this=this;
-    _this.$nextTick(function(){
-        window.addEventListener('scroll',_this.handleScroll)
-    })			
-  },
-  methods: {
-    toLocal(){
-      let Id=localStorage.getItem('toId');
-      let toElement=document.getElementById(Id);
-      if(Id){
-        toElement.scrollIntoView()
-      }
-    }
-  },
-  destroyed() {
-    localStorage.setItem('toId','');
-  },
-			
+import NavAbout from '@/components/NavAbout.vue';
 
+export default {
+    components: {
+      NavAbout,      
+    },
+    created() {
+        this.$nextTick(() => { this.toLocal(); });
+    },
+    mounted() {
+        let _this = this;
+        _this.$nextTick(function () {
+            window.addEventListener("scroll", _this.handleScroll);
+        });
+    },
+    methods: {
+        toLocal() {
+            let Id = localStorage.getItem("toId");
+            let toElement = document.getElementById(Id);
+            if (Id) {
+                toElement.scrollIntoView();
+            }
+        }
+    },
+    destroyed() {
+        localStorage.setItem("toId", "");
+    },
+    components: { NavAbout }
 }
 </script>

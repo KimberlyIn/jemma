@@ -1,26 +1,29 @@
 <template>
   <div class="footer d-flex flex-column justify-content-center">
     <div class="d-flex flex-column align-items-center">
-      <nav>
+      <!-- <nav>
+        <div 
+          v-for="(item,index) in title_list" 
+          :key="item.id" 
+          :value='item.title' 
+          @click="jump(index)" 
+          class="list1"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item"> 
+              {{item.title}}
+            </li>
+          </ul>
+        </div>
         <ul class="d-flex">
           <li>
-            <router-link to="/">
-              WORKS
-            </router-link>
-          </li>
-          <li>
-            <router-link to="">
-              ARTICLES
-            </router-link>
-          </li>
-          <li>
-            <router-link to="about">
+            <p @click="toguid('/about','about')">
               ABOUT
-            </router-link>
+            </p>
           </li>
         </ul>
-      </nav>
-      <div>
+      </nav> -->
+      <!-- <div>
         <ul class="d-flex icon-li">
           <li>
             <a href="#" class="icon">
@@ -33,21 +36,47 @@
             </a>
           </li>
         </ul>
+      </div> -->
+      <div class="copyright text-center">
+        <small>2021 ©Jemma Liu</small>
       </div>
     </div>
   </div>
-  <div class="copyright text-center">
+  <!-- <div class="copyright text-center">
     <small>2021 ©Jemma Liu</small>
-  </div>
+  </div> -->
 </template>
 
-<script>
+<!-- <script>
 export default {
   data () {
     return {
+      title_list: [
+        { title: 'WORKS', active: true },
+        { title: 'ARTICLES', active: false },
+      ],
     }
   },
   methods: {
-  }
+    toguid(path,id){
+      var path=path
+      var Id=id;
+      localStorage.setItem('toId',Id);
+      this.$router.push(path);
+    },
+    jump (index) {
+      var items = document.querySelectorAll(".scroll-item");
+      for (var i = 0; i < items.length; i++) {
+        if (index === i) {
+          items[i].scrollIntoView({
+            block: "start",
+            behavior: "smooth"
+          });
+        }
+      }
+    },
+  },
+  mounted() {
+  },
 }
-</script>
+</script> -->

@@ -1,4 +1,5 @@
 <template>
+  <NavAbout/>
   <div class="theNo9">
     <div class="header d-flex flex-column align-items-center justify-content-end">
       <div class="text-center">
@@ -25,7 +26,7 @@
             THE NO9 是一個以 Vue 為框架的 SSR 購物網站，編寫的語法包含 Vue、SASS、JavaScript、Bootstrap...等。在編寫的同時，盡量添加了大部分網站所需的互動功能，目的是希望自己能夠在嘗試的過程中，加速了解這些功能如何運作。
           </p>
         </div>
-        <div class="col-6">
+        <div class="col-6 col-6-rwd">
           <ul>
             <li>
               <h4>Technologies</h4>
@@ -47,7 +48,7 @@
               <div>
                 <h4>Source code</h4>
                 <div>
-                  <a href="#" class="icon">
+                  <a href="https://github.com/nine-2018" target="_blank" class="icon">
                     <i class="fab fa-github"></i>
                   </a>
                 </div>
@@ -203,7 +204,7 @@
         </div>
         <div class="box-height d-flex flex-column align-items-center">
           <h3 class="theno9-text-bold-a theno9-mb-b">總結</h3>
-          <p class="w-50 p-line-h">
+          <p class="p-line-h p-w">
             在建構這個網站前，我曾參考了各大購物網站可能會有的基本功能，最初其實是覺得相當的困難，在寫的過程中也確實遭遇了不少挫折，但也因為堅持完而得到了不少的收穫，這個網站或許仍然有許多不完美的地方，但希望自己可以在日後的探索漸漸的將網站做到最好。
           </p>
         </div>
@@ -216,3 +217,35 @@
     </div>
   </div>
 </template>
+
+<script>
+import NavAbout from '@/components/NavAbout.vue';
+
+export default {
+    components: {
+      NavAbout,
+    },
+    created() {
+        this.$nextTick(() => { this.toLocal(); });
+    },
+    mounted() {
+        let _this = this;
+        _this.$nextTick(function () {
+            window.addEventListener("scroll", _this.handleScroll);
+        });
+    },
+    methods: {
+        toLocal() {
+            let Id = localStorage.getItem("toId");
+            let toElement = document.getElementById(Id);
+            if (Id) {
+                toElement.scrollIntoView();
+            }
+        }
+    },
+    destroyed() {
+        localStorage.setItem("toId", "");
+    },
+    components: { NavAbout }
+}
+</script>

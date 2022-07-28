@@ -6,6 +6,15 @@
   }
 }
 
+@include media-breakpoint-down(lg) {
+  .navbar {
+    li {
+      text-align: center;
+      margin: 10px 0;
+    }
+  }
+}
+
 // Home.vue
 .header {
   height: 300px;
@@ -29,8 +38,6 @@
     padding-left: 100px;
   }
   .home-col12-col6-img {
-    width: 600px;
-    height: 500px;
     overflow: hidden;
     img {
       width: 100%;
@@ -64,9 +71,47 @@
   }
 }
 
+@include media-breakpoint-down(xl) {
+  .home-container {
+    .container {
+      width: 100%;
+    }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .header {
+    padding: 0 20px;
+  }
+  .home-container {
+    .container {
+      width: 100%;
+    }
+    .col-6 {
+      width: 100%;
+      padding: 0;
+    }
+    .col-12 {
+      padding: 50px 20px;
+    }
+    .home-col6-l {
+      margin-top: 50px;
+    }
+    .home-p-m {
+      margin: 5px 0;
+    }
+    .home-p-w-a {
+      width: 100%;
+    }
+    .col-6-mt {
+      margin-top: 50px;
+    }
+  }
+}
+
 // Footer.vue
 .footer {
-  height: 150px;
+  height: 100px;
   background: #808080;
   nav {
     padding: 20px 0;
@@ -123,6 +168,9 @@
     }
   }
   .container {
+    .icon {
+      font-size: 30px;
+    }
     h2 {
       margin-bottom: 30px;
       font-size: 2.5rem;
@@ -160,11 +208,52 @@
     .col-4 {
       padding: 20px 20px 20px 0;
     }
+    .p-w {
+      width: 50%;
+    }
   }
   .link-item {
     color: #757575;
     &:hover {
       color: #9e9e9e;
+    }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .theNo9 {
+    .img-bg {
+      .img-box {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        img {
+          padding: 0 50px;
+        }
+      }
+    }
+    .container {
+      .col-6 {
+        width: 100%;
+        .shop-web-p {
+          width: 100%;
+        }
+        ul {
+          padding: 0;
+        }
+      }
+      .p-w {
+        width: 100%;
+      }
+    }
+  }
+  
+}
+
+@include media-breakpoint-down(sm) {
+  .theNo9 {
+    .container {
+      padding: 0 20px;
     }
   }
 }
@@ -203,6 +292,40 @@
     }
     span {
       color: #808080;
+    }
+  }
+}
+
+@include media-breakpoint-down(xl) {
+  .about {
+    .about-item-a {
+      p {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .about {
+    .about-item-a {
+      p {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .about {
+    h1 {
+      text-align: center;
+    }
+    .pic-box {
+      margin: 0 auto;
+    }
+    .about-item-a {
+      text-align: center;
     }
   }
 }
