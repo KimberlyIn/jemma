@@ -1,0 +1,44 @@
+// 全站文字類顏色
+
+
+body {
+  font-family: "Helvetica", "Arial","LiHei Pro","微軟正黑體", "SFMono-Regular", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+p {
+  margin: 0;
+}
+img {
+  width: 100%;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.navbar-toggler {
+  border: none;
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+.row {
+  padding: 0;
+  margin: 0;
+}
+button, .btn, .navbar-toggler, .form-control {
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+button {
+  border: none;
+  background: none;
+}
+.border-n {
+  border: none;
+}
