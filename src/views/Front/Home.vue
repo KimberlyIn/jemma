@@ -17,7 +17,11 @@
           <div class="row home-col12-col6">
             <div class="col-6">
               <div class="home-col12-col6-img">
-                <img src="@/assets/images/index-home-img-box.jpg" alt="">
+                <div class="enlarge-box">
+                  <router-link to="theno9">
+                    <img src="@/assets/images/index-home-img-box.jpg" alt="">
+                  </router-link>
+                </div>
               </div>
             </div>
             <div class="col-6 home-col6-l home-col6-flex">
@@ -26,7 +30,7 @@
                 <h2>THE NO9</h2>
                 <p class="home-p-color home-p-m home-p-w-a">使用 Vue 框架、Bootstrap 完成的購物網站。</p>
               </div>
-              <div>
+              <div class="move">
                 <router-link to="theno9">
                   <small>Read more  <i class="fas fa-angle-right mt-2 ms-2"></i></small>
                 </router-link>
@@ -57,7 +61,7 @@
                     2021 年 9 月，聽說有一場比賽，必須每天寫文章 30 天不中斷，於是我選擇了以 JavaScript 為主題的技術文章，希望能夠在尋找相關知識與整理資料的過程中，加強自己對 JavaScript 的觀念。
                   </p>
                 </div>
-                <div>
+                <div class="move">
                   <a href="https://ithelp.ithome.com.tw/users/20138542/ironman/3906" target="_blank">
                     <small>Read more  <i class="fas fa-angle-right mt-2 ms-2"></i></small>
                   </a>

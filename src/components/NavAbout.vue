@@ -13,19 +13,19 @@
           <div>
             <ul class="navbar-nav">
               <li class="nav-item"> 
-                <p @click="toguid('/','works')">
+                <a @click="toguid('/','works')">
                   WORKS
-                </p>
+                </a>
               </li>
               <li class="nav-item"> 
-                <p @click="toguid('/','article')">
+                <a @click="toguid('/','article')">
                   ARTICLES
-                </p>
+                </a>
               </li>
               <li class="nav-item"> 
-                <p @click="toguid('/about','about')">
+                <a @click="toguid('/about','about')">
                   ABOUT
-                </p>
+                </a>
               </li>
             </ul>
           </div>

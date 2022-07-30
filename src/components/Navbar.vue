@@ -16,16 +16,16 @@
           >
             <ul class="navbar-nav">
               <li class="nav-item"> 
-                {{item.title}}
+                <a>{{item.title}}</a>
               </li>
             </ul>
           </div>
           <div>
             <ul class="navbar-nav">
               <li class="nav-item"> 
-                <p @click="toguid('/about','about')">
+                <a @click="toguid('/about','about')">
                   ABOUT
-                </p>
+                </a>
               </li>
             </ul>
           </div>

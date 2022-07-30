@@ -358,3 +358,16 @@
 .about-p-m-l {
   margin-left: 15px;
 }
+.enlarge-box {
+	cursor: pointer; // 鼠標變成手指樣式
+	transition: all 0.3s; // 所有屬性變化在 0.3 秒內執行動畫
+  &:hover {
+    transform: scale(1.1); // 鼠標放上之後元素倍數放大
+  }
+}
+.move {
+  transition: all 0.3s;
+  &:hover {
+    padding-left: 10px; 
+  }
+}
