@@ -41,7 +41,7 @@
             <div class="col-6">
               <div class="home-col12-col6-img">
                 <div class="enlarge-box">
-                    <a href="https://www.behance.net/portfolio/editor?project_id=150073325">
+                    <a href="https://www.behance.net/gallery/150073325/UI-" target="_blank">
                       <img src="@/assets/images/ui-page.png" alt="">
                     </a>
                 </div>
@@ -54,7 +54,7 @@
                 <p class="home-p-color home-p-m home-p-w-a">關於貓犬議題及周邊商品的網站，包含相關文章與周邊商品陳列。</p>
               </div>
               <div class="move">
-                <a href="https://www.behance.net/portfolio/editor?project_id=150073325">
+                <a href="https://www.behance.net/gallery/150073325/UI-" target="_blank">
                   <small>Read more  <i class="fas fa-angle-right mt-2 ms-2"></i></small>
                 </a>
               </div>
