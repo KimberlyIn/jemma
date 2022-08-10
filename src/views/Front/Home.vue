@@ -41,7 +41,7 @@
             <div class="col-6">
               <div class="home-col12-col6-img">
                 <div class="enlarge-box">
-                    <a href="https://www.behance.net/gallery/150073325/UI-" target="_blank">
+                    <a href="https://www.behance.net/gallery/150073325/UI-" target="_blank" >
                       <img src="@/assets/images/ui-page.png" alt="">
                     </a>
                 </div>
